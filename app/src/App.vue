@@ -10,7 +10,7 @@ import SecretBox from './components/SecretBox.vue'
       <img src="/logo.png" class="logo" alt="Secret Box logo" />
     </a>
   </div>
-  <SecretBox msg="Secret Box Template" />
+  <SecretBox msg="Secret Blueprint Box" />
 </template>
 
 <style scoped>

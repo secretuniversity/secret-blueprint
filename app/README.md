@@ -1,4 +1,4 @@
-# Secret Box Template
+# Secret Blueprint Box
 
 ## Install Dependencies
 

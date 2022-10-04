@@ -1,9 +1,9 @@
 [package]
-name = "secret-box-vite-template"
+name = "secret-blueprint-box"
 version = "0.1.0"
 authors = ["laura <laura@secretchaingirl.io>"]
 edition = "2021"
-description = "A secret box template for the simple counter contract"
+description = "A secret box blueprint for creating your own"
 license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

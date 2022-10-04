@@ -217,7 +217,7 @@ function create_secret_box() {
     local init_msg
 
     if [[ "$SECRET_BOX_ADDRESS" != '' ]]; then
-        log 'Secret Box contract already exists'
+        log 'Secret Blueprint Box contract already exists'
         echo "$SECRET_BOX_ADDRESS"
         return 0
     fi
@@ -225,12 +225,12 @@ function create_secret_box() {
     init_msg='{"count":0}'
     RECEIVER_ADDRESS="$(create_contract '.' "$init_msg")"
 
-    log "uploaded Secret Box contract to $SECRET_BOX_ADDRESS"
+    log "uploaded Secret Blueprint Box contract to $SECRET_BOX_ADDRESS"
     echo "$SECRET_BOX_ADDRESS"
 }
 
 function main() {
-    log '              <####> Create Secret Box contract <####>'
+    log '              <####> Create Secret Blueprint Box contract <####>'
     log "secretcli version in the docker image is: $(secretcli version)"
 
     local init_msg
@@ -238,7 +238,7 @@ function main() {
     contract_addr="$(create_contract '.' "$init_msg")"
 
     log "contract address: $contract_addr"
-    log 'Secret Box created successfully'
+    log 'Secret Blueprint Box created successfully'
 
     # If everything else worked, return successful status
     echo $contract_addr

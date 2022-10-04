@@ -1,8 +1,8 @@
-# Secret Box Template ![secret box logo](/docs/logo-32x32.png)
+# Secret Blueprint Box ![secret box logo](/docs/logo-32x32.png)
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/secretuniversity/secret-box-vite-template)
 
-The Secret Box Template is a Gitpod-enabled quickstart for dapp development on [Secret Network](https://scrt.network).
+The Secret Blueprint Box is a Gitpod-enabled quickstart for dapp development on [Secret Network](https://scrt.network).
 It consists of a frontend (Vue + Vite + Typescript) and a secret contract (Rust + Secret CosmWasm), based on the [secret counter template](https://github.com/secretuniversity/secret-template-cw1).
 
 ## What is a Secret Box?

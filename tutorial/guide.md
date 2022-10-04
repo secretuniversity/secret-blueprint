@@ -1,8 +1,8 @@
-# Secret Box Template Tutorial 
+# Secret Blueprint Box Tutorial 
 
 This box comes with everything you need to create your own Secret Box.
 
-![](illustrations/secret-box-template.png)
+![](illustrations/secret-blueprint-box.png)
 
 ## Getting Started
 
@@ -24,11 +24,11 @@ See the following steps for more details on the changes you need to make to make
     
     ``` 
     [package]
-    name = "secret-box-vite-template"
+    name = "secret-blueprint"
     version = "0.1.0"
     authors = ["laura <laura@secretchaingirl.io>"]
     edition = "2021"
-    description = "A secret box template for the simple counter contract"
+    description = "A secret box blueprint for creating your own"
     license = "MIT" 
     ```
  - And define the secret contract dependencies needed by your Secret Box
