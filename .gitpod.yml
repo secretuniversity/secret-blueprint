@@ -43,6 +43,7 @@ tasks:
       echo "Starting localsecret blockchain"
       make localsecret &
       gp ports await 26657
+      scripts/localsecret_healthcheck.sh
       gp sync-done blockchain
       docker container logs -f localsecret
     openMode: split-right
@@ -54,10 +55,10 @@ tasks:
       make build
       echo "Build schema files"
       make schema
-    command: |
-      gp sync-await blockchain
       echo "Run unit tests"
       make test
+    command: |
+      gp sync-await blockchain
       echo "Deploy and instantiate secret contract to local blockchain"
       gp ports await 26657
       gp env SECRET_BOX_ADDRESS=`scripts/create_secret_box.sh`

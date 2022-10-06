@@ -13,7 +13,7 @@ They are intended to be run in a developer sandbox so you don't have to worry ab
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/secretuniversity/secret-box-vite-template)
 
-There are a couple of key things that make Secret Boxes special and unique :rocket::
+There are a couple of things that make Secret Boxes special :rocket::
 
 - In addition to the secret contract, each box comes with a professionally-designed and implemented frontend, which includes a UI/UX kit.
 
@@ -36,6 +36,8 @@ Creating a Secret Box involves one part coding and one part technical writing.
 
 Each Secret Box has an accompanying tutorial hosted on the Secret University website. The tutorial is written in Markdown and can be found in the [tutorial](/tutorial/) directory of this repo.
 
+See this [guide](tutorial/guide.md) for more details.
+
 ## Setup Your Local Developer Environment
 
 This [Setting Up Your Environment](https://docs.scrt.network/secret-network-documentation/development/getting-started/setting-up-your-environment) guide will help you get going on your journey developing a Secret Box.
@@ -53,10 +55,7 @@ You can find information on installing `yarn`, getting started, advanced topics 
 
 ## Writing Your Guide
 
-Secret Box tutorials are written using Markdown and require specific pieces of front matter to display properly 
-on the website.
-
-The tutorial content is placed in `tutorial/guide.md` with any accompanying images kept in the `tutorial/illustrations` directory.
+Secret Box tutorials are written using Markdown. The tutorial content is placed in `tutorial/guide.md` with any accompanying images kept in the `tutorial/illustrations` directory.
 
 ## Project Structure
 
@@ -86,8 +85,7 @@ The tutorial content is placed in `tutorial/guide.md` with any accompanying imag
 
 ### Secret Contract
 
-After cloning the repo, the following commands are run from the root of the project, from a terminal and apply
-to the secret contracts:
+After creating your own repository using this template, the following commands are run from the root of the project, from a terminal and apply to the secret contracts:
 
 | Command                | Action                                                    |
 |:---------------------  |:--------------------------------------------------------  |
@@ -129,29 +127,10 @@ To connect, prepend the port number with the gitpod url. e.g. if the workspace i
 # Resources
 - [Secret Network docs](https://docs.scrt.network)
 - [Secret IDE](https://www.digiline.io/)
+- [Gitpod docs](https://www.gitpod.io/docs)
 
 # Contributors
 - Laura Weindorf [Github](https://github.com/secetchaingirl)
 - Alex (sinplea) [Github](https://github.com/sinplea)
 - DDT5 [Github](https://github.com/DDT5)
-
-# Notes
-
-To open Gitpod browser preview of Secret Box in the workspace:
-
-```
-gp preview $(gp url 5173) --external
-```
-
-or in an external browser window:
-
-```
-gp preview $(gp url 5173)
-```
-
-To open a markdown file in Gitpod workspace:
-
-```
-gp open tutorial/guide.md
-```
 
