@@ -29,15 +29,21 @@ Aside from making your contract and app-specific changes to the template code, y
 
  1. `Cargo.toml` - `cargo` configuration and contract dependencies
 <br/>
+
  2. `README.md` - information including how to run it locally (you can use the `docs/` directory for any diagram or other images needed to document your Secret Box). 
 <br/>
+
  3. `examples/schema.rs` - update with the name of your secret contract
 <br/>
+
  4. `integration.ts` - integration tests for your Secret Box
 <br/>
+
  5. `tutorial/` - write your guide in `guide.md` and include any images in `illustrations/`
 <br/>
+
  6. `app/` - make your Secret Box frontend changes here
+ <br/>
 
 See the following steps for more details on the changes you'll want to make. Feel free to make any needed modifications to make this Secret Box your own :tada:.
 
@@ -89,7 +95,6 @@ This is where you'll write the guide for your Secret Box. Under the `tutorial/` 
 
 -  delete `tutorial/illustrations/secret-box-template.png`
 <br/>
-- create a snapshot of your running Secret Boxs and add it to the `illustrations/` directory, and reference it in the guide.
  
 ## Secret Box Frontend
 This is where all of your frontend code goes, under the `app/` directory and is setup as a [Vite](https://vitejs.dev/guide/)  project using the [Vue](https://vuejs.org/) framework and [Typescript](https://www.typescriptlang.org/) programming language.
@@ -102,34 +107,14 @@ After adding your code:
 
 1. Use `src/assets/logo.png` in your `src/App.vue`, which is the Secret Box logo, somewhere within the header of your application
 <br/>
-```
-    <a href="https://scrt.university/repositories" target="_blank">
-      <img src="/logo.png" class="logo" alt="Secret Box logo" />
-    </a>
-```
-<br/>
 
 2. Add any box images needed as part of your guide to the `illustrations/` directory. For example, listing unit-test results in a tutorial step
 <br/>
 
 3. Change the name of your Secret Box app in `package.json`
 <br/>
-```
-  "name": "secret-box-vite-template",
-  "version": "0.0.1",
-```
-<br/>
 
 4. Change the `<title>` element in `index.html` to the name of your Secret Box
-<br/>
-```
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Secret Box Template</title>
-  </head>
-```
 <br/>
 
 5. Put any images referenced in your modified `index.html` in the `public/` directory
@@ -137,34 +122,11 @@ After adding your code:
 
 6. Modify the SecretBox Vue element in `App.vue`
 <br/>
-```
-<SecretBox msg="Secret Box Template" />
-```
-<br/>
 
 7. Images for your Secret Box frontend go in `src/assets`
 <br/>
 
 8. Create your frontend SecretBox component in `src/components/SecretBox.vue`
-<br/>
-```
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-</script>
-
-<template>
-  <h3>{{ msg }}</h3>
-</template>
-
-<style scoped>
-h1 {
-	font-size: 150px;
-}
-</style>
-```
 <br/>
 
 
