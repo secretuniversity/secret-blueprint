@@ -14,7 +14,7 @@ When the workspace is launched, `LocalSecret` is started, shown in the first ter
 
 To open the Secret Box in an external browser, open a new terminal window within the 
 workspace and enter the following Gitpod CLI command.
-```![secret-box-template](/assets/secret-box-template.png)
+```
 gp preview $(gp url 5173) --external
 ```
 
@@ -74,8 +74,16 @@ See the following steps for more details on the changes you'll want to make. Fee
     ```
 
     
-## README
- - Update the `README.md` so that it's specific to your Secret Box.
+## README.md
+ - Modify the "Open in Gitpod" link so that it references your Secret Box repository name/location
+
+```
+https://gitpod.io/#https://github.com/secretuniversity/secret-blueprint-box
+```
+
+*Once deployed to our platform, we will update the link so that it references the Secret University github organization*
+
+ - Update it so that it's specific to your Secret Box.
  
 The README is meant to be used in a local developer environment. Include instructions on setting up and running your Secret Box. Consider including anything you think will help [Secret University](https://scrt.university) list your secret box, upon review and approval by the core team. Based on your judgement, you might have images and even diagrams (e.g. UML), design descriptions--basically the key things you think will be helpful for Secret Network developers in learning from and using your Secret Box.
 
@@ -90,8 +98,15 @@ use secret_box_vite_template::state::State;
 ## Integration Tests
 - After completing your secret contract and unit test code, modify the `integration.ts` as needed. These are super helpful for illustrating how to interact with a Secret App such as connecting to the network, querying and executing transactions, etc.
 
+One thing to consider when writing your guide is to determine what blueprint code your Secret Box contains and 
+what will be given in the tutorial for developers to add/modify manually.
+
+In this scenario, consider creating a `solution/` or similar directory that developers can refer to while learning. 
+It's also entirely possble, and acceptable, that your code is complete and the tutorial steps walk the developer 
+through the key aspects and code snippets you decide to include!
+
 ## Tutorial
-This is where you'll write the guide for your Secret Box. Under the `tutorial/` directory you'll find a starting guide (this file :tada:) in `guide.md`. The Secret University platform will display the tutorial steps using the `H1, H2, H3` tags as the Table of Contents structure.
+This is where you'll write the guide for your Secret Box. Under the `tutorial/` directory you'll find a starting guide (this file :tada:) in `guide.md`.
 
 -  delete `tutorial/illustrations/secret-box-template.png`
 <br/>
