@@ -105,6 +105,8 @@ In this scenario, consider creating a `solution/` or similar directory that deve
 It's also entirely possble, and acceptable, that your code is complete and the tutorial steps walk the developer 
 through the key aspects and code snippets you decide to include!
 
+This is an excellent example of a code walkthrough that is more inline with the above approach: [Millionaire's Problem Breakdown](https://docs.scrt.network/secret-network-documentation/development/getting-started/millionaires-problem-breakdown-extra-credit).
+
 ## Tutorial
 This is where you'll write the guide for your Secret Box. Under the `tutorial/` directory you'll find a starting guide (this file :tada:) in `guide.md`.
 
