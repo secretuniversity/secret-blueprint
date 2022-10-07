@@ -34,7 +34,8 @@ tasks:
       yarn install 
       echo "Install integration test dependencies"
       cd  ../tests
-      yarn install
+      npm install
+      npm install -D ts-node
       gp sync-done secretbox-env
     command: |
       exit
