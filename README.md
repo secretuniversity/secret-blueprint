@@ -11,7 +11,7 @@ Secret Boxes are quickstarts or blueprints that contain everything you need to s
 
 They are intended to be run in a developer sandbox so you don't have to worry about installing various tooling, frameworks, etc.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/secretuniversity/secret-box-vite-template)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/secretuniversity/secret-blueprint-box)
 
 There are a couple of things that make Secret Boxes special :rocket::
 
