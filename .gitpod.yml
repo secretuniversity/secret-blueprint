@@ -30,8 +30,11 @@ tasks:
       echo "Install Vue"
       yarn global add @vue/cli
       cd app
-      echo "Install project dependencies"
+      echo "Install frontend dependencies"
       yarn install 
+      echo "Install integration test dependencies"
+      cd  ../tests
+      yarn install
       gp sync-done secretbox-env
     command: |
       exit
