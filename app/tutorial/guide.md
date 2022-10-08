@@ -36,10 +36,10 @@ Aside from making your contract and app-specific changes to the template code, y
  3. `examples/schema.rs` - update with the name of your secret contract
 <br/>
 
- 4. `integration.ts` - integration tests for your Secret Box
+ 4. `tests/integration.ts` - integration tests for your Secret Box
 <br/>
 
- 5. `tutorial/` - write your guide in `guide.md` and include any images in `illustrations/`
+ 5. `app/tutorial/` - write your guide in `guide.md` and include any images in `illustrations/`
 <br/>
 
  6. `app/` - make your Secret Box frontend changes here
@@ -100,9 +100,9 @@ use secret_box_vite_template::state::State;
 
 
 ## Tutorial
-This is where you'll write the guide for your Secret Box. Under the `tutorial/` directory you'll find a starting guide (this file :tada:) in `guide.md`.
+This is where you'll write the guide for your Secret Box. Under the `app/tutorial/` directory you'll find a starting guide (this file :tada:) in `guide.md`.
 
--  delete `tutorial/illustrations/secret-box-template.png`
+-  delete `app/tutorial/illustrations/secret-box-template.png`
 <br/>
  
 One thing to consider when writing your guide is to determine what blueprint code your Secret Box contains and 

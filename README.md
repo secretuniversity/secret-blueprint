@@ -34,9 +34,9 @@ When launched the following automated tasks are kicked off:
 
 Creating a Secret Box involves one part coding and one part technical writing.
 
-Each Secret Box has an accompanying tutorial hosted on the Secret University website. The tutorial is written in Markdown and can be found in the [tutorial](/tutorial/) directory of this repo.
+Each Secret Box has an accompanying tutorial hosted on the Secret University website. The tutorial is written in Markdown and can be found in the [tutorial](/app/tutorial/) directory of this repo.
 
-See this [guide](tutorial/guide.md) for more details.
+See this [guide](/app/tutorial/guide.md) for more details.
 
 ## Setup Your Local Developer Environment
 
@@ -55,7 +55,7 @@ You can find information on installing `yarn`, getting started, advanced topics 
 
 ## Writing Your Guide
 
-Secret Box tutorials are written using Markdown. The tutorial content is placed in `tutorial/guide.md` with any accompanying images kept in the `tutorial/illustrations` directory.
+Secret Box tutorials are written using Markdown. The tutorial content is placed in `app/tutorial/guide.md` with any accompanying images kept in the `app/tutorial/illustrations` directory.
 
 ## Project Structure
 
@@ -64,22 +64,17 @@ Secret Box tutorials are written using Markdown. The tutorial content is placed 
 .
 ├── app
 │   ├── public
-│   └── src
-│       ├── assets
-│       └── components
+│   ├── src
+│   │   ├── assets
+│   │   ├── components
+│   └── tutorial
+│       └── illustrations
 ├── docs
 ├── examples
 ├── schema
+├── scripts
 ├── src
-├── target
-│   ├── debug
-│   ├── release
-│   └── wasm32-unknown-unknown
-│       └── release
-├── tests
-└── tutorial
-    ├── guide.md
-    └── illustrations
+└── tests
 ```
 ## Commands & Usage
 
