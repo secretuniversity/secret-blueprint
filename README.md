@@ -128,9 +128,11 @@ To connect, prepend the port number with the gitpod url. e.g. if the workspace i
 `https://1317-secretunive-secretboxvi-zyc1kppqbvk.ws-us69.gitpod.io`.
 
 # Resources
-- [Secret Network docs](https://docs.scrt.network)
+- [Secret Network](https://docs.scrt.network)
 - [Secret IDE](https://www.digiline.io/)
-- [Gitpod docs](https://www.gitpod.io/docs)
+- [Gitpod](https://www.gitpod.io/docs)
+- [Vite](https://vitejs.dev/guide)
+- [Vue](https://vuejs.org)
 
 # Contributors
 - Laura Weindorf [Github](https://github.com/secetchaingirl)
