@@ -42,8 +42,8 @@ See this [guide](/app/tutorial/guide.md) for more details.
 
 This [Setting Up Your Environment](https://docs.scrt.network/secret-network-documentation/development/getting-started/setting-up-your-environment) guide will help you get going on your journey developing a Secret Box.
 
-In addition to the Secret Contract setup, you will also need to install `Nodejs` and `yarn` for the integration 
-tests and frontend app.
+In addition to the Secret Contract setup, you will also need to install `Nodejs`, `yarn` and `ts-node` for the 
+integration tests and frontend app.
 
 ### Install Nodejs
 
