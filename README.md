@@ -53,6 +53,14 @@ Use the installer for your environment [here](https://nodejs.dev/en/download).
 
 You can find information on installing `yarn`, getting started, advanced topics and more [here](https://yarnpkg.com).
 
+### Install ts-node
+
+`ts-node` is a TypeScript engine for node.js and is used for the integration tests which are written in Typescript.
+
+```
+npm install -D ts-node
+```
+
 ## Writing Your Guide
 
 Secret Box tutorials are written using Markdown. The tutorial content is placed in `app/tutorial/guide.md` with any accompanying images kept in the `app/tutorial/illustrations` directory.
