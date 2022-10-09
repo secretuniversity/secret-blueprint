@@ -100,9 +100,10 @@ After creating your own repository using this template, the following commands a
 
 ### Integration Tests
 
-The integration tests are located under the `tests` directory and uses `secret.js` to interact with the
-deployed secret contract. These are great examples of interacting with the Secret Network and can be used
-to bootstrap frontend development.
+The integration tests are located under the `tests` directory and use `secret.js` to create, deploy and
+interact with the secret counter contract.
+
+These are great examples of interacting with the Secret Network and can be used to bootstrap frontend development.
 
 ```
 npx ts-node integration.ts
