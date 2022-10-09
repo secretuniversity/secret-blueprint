@@ -30,7 +30,7 @@ When launched the following automated tasks are kicked off:
 - instantiate the secret contract
 - install app dependencies and launch the frontend using Vite
 
-# Creating a Secret Box
+## Creating a Secret Box
 
 Creating a Secret Box involves one part coding and one part technical writing.
 
@@ -38,22 +38,22 @@ Each Secret Box has an accompanying tutorial hosted on the Secret University web
 
 See this [guide](/app/tutorial/guide.md) for more details.
 
-## Setup Your Local Developer Environment
+### Setup Your Local Developer Environment
 
 This [Setting Up Your Environment](https://docs.scrt.network/secret-network-documentation/development/getting-started/setting-up-your-environment) guide will help you get going on your journey developing a Secret Box.
 
 In addition to the Secret Contract setup, you will also need to install `Nodejs`, `yarn` and `ts-node` for the 
 integration tests and frontend app.
 
-### Install Nodejs
+#### Install Nodejs
 
 Use the installer for your environment [here](https://nodejs.dev/en/download).
 
-### Install Yarn
+#### Install Yarn
 
 You can find information on installing `yarn`, getting started, advanced topics and more [here](https://yarnpkg.com).
 
-### Install ts-node
+#### Install ts-node
 
 `ts-node` is a TypeScript engine for node.js and is used for the integration tests which are written in Typescript.
 
@@ -61,11 +61,11 @@ You can find information on installing `yarn`, getting started, advanced topics 
 npm install -D ts-node
 ```
 
-## Writing Your Guide
+### Writing Your Guide
 
 Secret Box tutorials are written using Markdown. The tutorial content is placed in `app/tutorial/guide.md` with any accompanying images kept in the `app/tutorial/illustrations` directory.
 
-## Project Structure
+#### Project Structure
 
 ```
 /
@@ -98,7 +98,7 @@ After creating your own repository using this template, the following commands a
 | `make localsecret`     | Launches the dockerized `localsecret` developer instance  |
 | `make deploy`          | Stores the compiled/optimized contract on `localsecret`   |
 
-## Integration Tests
+### Integration Tests
 
 The integration tests are located under the `tests` directory and uses `secret.js` to interact with the
 deployed secret contract. These are great examples of interacting with the Secret Network and can be used
@@ -121,18 +121,34 @@ These commands apply to the frontend of the Secret Box and are run from the `app
 | `yarn preview` | Preview your build locally, before deploying |
 
 
-### Connecting from outside Gitpod
+## LocalSecret LCD
 
-To connect, prepend the port number with the gitpod url. e.g. if the workspace is at
-`https://secretunive-secretboxvi-zyc1kppqbvk.ws-us69.gitpod.io` then you can connect to the LCD service at
+`LocalSecret` implements an LCD (REST API), available on port 1317, that communicates with the Remote
+Procedure Call (RPC) endpoint and allows you to use HTTP to communicate with the node.
+
+### Local Developer Environment
+
+From within a local development environment, you can query and post transactions using: http://localhost:1317.
+
+Checkout the http://localhost:1317/swagger/ UI which makes it easy to interact with the node. Or use
+http://localhost:1317/openapi/ to view the queries, transactions and parameters that are available.
+
+### Gitpod Workspace
+
+When using the Gitpod workspace, prepend the port number to the gitpod url. If the workspace is at
+`https://secretunive-secretboxvi-zyc1kppqbvk.ws-us69.gitpod.io`, then you can connect to the LCD service at
 `https://1317-secretunive-secretboxvi-zyc1kppqbvk.ws-us69.gitpod.io`.
 
+To use the Swagger or OpenAPI interaces append `/swagger/` or `/openapi/` to the Gitpod URL:
+
+`https://1317-secretunive-secretboxvi-zyc1kppqbvk.ws-us69.gitpod.io/swagger/`
+
 # Resources
-- [Secret Network](https://docs.scrt.network)
-- [Secret IDE](https://www.digiline.io/)
-- [Gitpod](https://www.gitpod.io/docs)
-- [Vite](https://vitejs.dev/guide)
-- [Vue](https://vuejs.org)
+- [Secret Network](https://docs.scrt.network) - official Secret Network documentation and guides
+- [Secret IDE](https://www.digiline.io/) - an integration development environment specific to secret contracts
+- [Gitpod](https://www.gitpod.io/docs) - Gitpod documentation
+- [Vite](https://vitejs.dev/guide) - Guide on using Vite, a lean and fast development server
+- [Vue](https://vuejs.org) - Progressive javascript framework
 
 # Contributors
 - Laura Weindorf [Github](https://github.com/secetchaingirl)
