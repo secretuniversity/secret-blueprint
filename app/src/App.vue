@@ -1,28 +1,33 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import { ref } from 'vue'
+
+import Contents from './components/Contents.vue'
+import Guide from './components/Guide.vue'
+import TopBar from './components/TopBar.vue'
 import SecretBox from './components/SecretBox.vue'
+
+let sections = ref([] as string[])
 </script>
 
 <template>
-  <div>
-    <a href="https://scrt.university/repositories" target="_blank">
-      <img src="/logo.png" class="logo" alt="Secret Box logo" />
-    </a>
-  </div>
-  <SecretBox msg="Secret Blueprint Box" />
-</template>
+  <div class="grid grid-cols-12 auto-rows-max dark:bg-primary-dark dark:text-white">
+    <div class="col-span-2">
+      <Contents :sections="sections"></Contents>
+    </div>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+    <div class="col-start-3 col-span-full">
+      <div class="sticky top-0 bg-white dark:bg-primary-dark pb-2">
+        <TopBar></TopBar>
+        <div class="max-w-5xl mx-auto">
+          <div class="border border-gray-400 rounded-md pt-2 px-6 mb-24">
+            <SecretBox title="Secret Blueprint Box"></SecretBox>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 pl-4">
+        <Guide @headings="(s) => sections = s"></Guide>
+      </div>
+    </div>
+  </div>
+</template>

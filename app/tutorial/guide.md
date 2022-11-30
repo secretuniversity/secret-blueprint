@@ -1,8 +1,11 @@
 # Secret Blueprint Box Tutorial 
 
+## Introduction
+
 This box comes with everything you need to create your own Secret Box. In the screenshot below, you can see the Secret Box launched in a [Gitpod](https://gitpod.io/docs) workspace. 
 
-## Gitpod Workspace
+_Gitpod Workspace Configuration_
+
 The `.gitpod.yml` (in the project root directory) has definitions for tasks and prebuild information 
 that define how the Secret Box is configured and launched.
 
@@ -18,13 +21,12 @@ When the workspace is launched using the full automated configuration, `LocalSec
 
 To open the Secret Box in an external browser, open a new terminal window within the 
 workspace and enter the following Gitpod CLI command.
+
 ```
 gp preview $(gp url 5173) --external
 ```
 
 NOTE: the Vite server is configured to listen to port 5173 for requests.
-
-![](illustrations/secret-blueprint-box.png)
 
 
 ## Getting Started

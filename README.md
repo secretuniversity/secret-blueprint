@@ -4,8 +4,14 @@ The Secret Blueprint Box is a Gitpod-enabled quickstart for dapp development on 
 
 It consists of a frontend (Vue + Vite + Typescript) and a secret contract (Rust + Secret CosmWasm), based on the [secret counter template](https://github.com/secretuniversity/secret-template-cw1), that you will use to create your own _Secret Box_ for other developers!
 
-Feel free to swap out the frontend stack for something you prefer (e.g. React, Svelte). If you're comfortable with basic UI/UX design, we encourage you to make that part of 
-your _Secret Box_. You can also request assitance from the Secret Unversity team to help design your DApp frontend.
+If you're comfortable with basic UI/UX design, we encourage you to create that as part of 
+your _Secret Box_ implementation. You can also request assitance from the Secret Unversity team to help design your DApp frontend.
+
+This _Secret Blueprint Box_ comes with a very basic design and we encourage you, if you're comfortable with UI/UX design, to create and implement that as part of your _Secret Box_. And feel free to swap out the frontend stack for something you prefer (e.g. React, Svelte).
+
+The guide is displayed as part of the frontend, with the tutorial steps in the left column, the _Secret Box DApp_ to the right and the tutorial content below that. You'll be modifying this guide markdown so that it follows the content specific to your box. Your box's frontend code will primarily go [here](`/app/src/components/SecretBox.vue`).
+
+![](/docs/secret-blueprint-box.png)
 
 ## What is a Secret Box?
 
@@ -109,9 +115,9 @@ Procedure Call (RPC) endpoint and allows you to use HTTP to communicate with the
 
 From within a local development environment, you can query and post transactions using: http://localhost:1317.
 
-Checkout the http://localhost:1317/swagger/ UI which makes it easy to interact with the node. Or use
+Checkout the http://localhost:1317/swagger/ UI which makes it easy to interact with the node. Or use 
 http://localhost:1317/openapi/ to view the queries, transactions and parameters that are available.
-
+ 
 ### Gitpod Workspace
 
 When using the Gitpod workspace, prepend the port number to the Gitpod URL. 
@@ -124,6 +130,8 @@ To use the Swagger or OpenAPI interaces append `/swagger/` or `/openapi/` to the
 
 `https://1317-secretunive-secretboxvi-zyc1kppqbvk.ws-us69.gitpod.io/swagger/`
 
+![](docs/swagger-interface.png)
+
 # Resources
 - [Secret Network](https://docs.scrt.network) - official Secret Network documentation and guides
 - [Secret IDE](https://www.digiline.io/) - an integration development environment specific to secret contracts
@@ -132,7 +140,7 @@ To use the Swagger or OpenAPI interaces append `/swagger/` or `/openapi/` to the
 - [Vue](https://vuejs.org) - Progressive javascript framework
 
 # Contributors
-- Laura Weindorf [Github](https://github.com/secetchaingirl)
-- Alex (sinplea) [Github](https://github.com/sinplea)
-- DDT5 [Github](https://github.com/DDT5)
-
+- Laura SecretChainGirl [Github](https://github.com/secetchaingirl) - secret blueprint box development
+- Alex Sinplea [Github](https://github.com/sinplea) - frontend development
+- Jeff SecretMickey - [Telegram](https://t.me/secretMickey) UI/UX design
+- Kate Unakatu [Telegram](https://t.me/unakatu) - UI/UX design and graphics (Lorum Ipsem and Geek.pics founding team member)
