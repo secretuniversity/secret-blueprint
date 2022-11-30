@@ -7,10 +7,14 @@ The `.gitpod.yml` (in the project root directory) has definitions for tasks and 
 that define how the Secret Box is configured and launched.
 
 During the prebuild phase, Gitpod installs all of the project dependencies including pulling the necessary docker
-images used for `LocalSecret` and the contract optimizer (see the `Makefile`). And to make the startup process
-faster, the secret contract is compiled and unit tests are run as part of the prebuild as well.
+images used for `LocalSecret` and the contract optimizer (see the `Makefile`). 
 
-When the workspace is launched, `LocalSecret` is started, shown in the first terminal window (below). In the second terminal window, the script that uploads and instantiates the secret contract is kicked off. Finally, the frontend app is opened in a [VS Code](https://code.visualstudio.com/) browser preview window.
+There are additional Gitpod `yml` configurations for:
+
+- `.gitpod.yml.localsecret` - launches the `LocalSecret` blockchain on workspace startup
+- `.gitpod.yml.secretbox` - automates the entire process for the secret box, including compiling/deploying/creating the contract, running unit tests, and finally launching the frontend DApp
+
+When the workspace is launched using the full automated configuration, `LocalSecret` is started, shown in the first terminal window (below). In the second terminal window, the script that uploads and instantiates the secret contract is kicked off. Finally, the frontend app is opened in a [VS Code](https://code.visualstudio.com/) browser preview window.
 
 To open the Secret Box in an external browser, open a new terminal window within the 
 workspace and enter the following Gitpod CLI command.
@@ -30,13 +34,13 @@ Aside from making your contract and app-specific changes to the template code, y
  1. `Cargo.toml` - `cargo` configuration and contract dependencies
 <br/>
 
- 2. `README.md` - information including how to run it locally (you can use the `docs/` directory for any diagram or other images needed to document your Secret Box). 
+ 2. `README.md` - information including how to run it locally (you can use the `docs/` directory for additional guides, diagrams or other images needed to document your Secret Box). 
 <br/>
 
  3. `examples/schema.rs` - update with the name of your secret contract
 <br/>
 
- 4. `tests/integration.ts` - integration tests for your Secret Box
+ 4. `tests/secretbox.ts` - integration tests for your Secret Box
 <br/>
 
  5. `app/tutorial/` - write your guide in `guide.md` and include any images in `illustrations/`
@@ -44,6 +48,11 @@ Aside from making your contract and app-specific changes to the template code, y
 
  6. `app/` - make your Secret Box frontend changes here
  <br/>
+
+ 7. `docs/setting-up-your-environment` - to make it more specific to your _Secret Box_ (this guide contains instructions to work with a box in a local developer environment)
+ <br/>
+ 
+ 8. `docs/setting-up-your-gitpod-workspace` - tailored to the Gipod environment, make adjustments to this guide for the setup, prebuild tasks and basically customize it to your needs
 
 See the following steps for more details on the changes you'll want to make. Feel free to make any needed modifications to make this Secret Box your own :tada:.
 
@@ -63,9 +72,9 @@ See the following steps for more details on the changes you'll want to make. Fee
     
     ``` 
     [dependencies]
-    cosmwasm-std = { git = "https://github.com/scrtlabs/cosmwasm", branch = "secret" }
-    cosmwasm-storage = { git = "https://github.com/scrtlabs/cosmwasm", branch = "secret"
-    schemars = "0.8.1
+    cosmwasm-std = { package = "secret-cosmwasm-std", version = "1.0.0" }
+    cosmwasm-storage = { package = "secret-cosmwasm-storage", version = "1.0.0" }
+    schemars = "0.8.1"
     serde = { version = "1.0.114", default-features = false, features = ["derive"] }
     thiserror = { version = "1.0" }
     
@@ -91,12 +100,12 @@ The README is meant to be used in a local developer environment. Include instruc
 - Modify `examples/schema.rs` and change the secret contract name so that it matches `Cargo.toml`
 
 ```
-use secret_box_vite_template::msg::{CountResponse, ExecuteMsg, InstantiateMsg, QueryMsg};
-use secret_box_vite_template::state::State;
+use secret_blueprint_box::msg::{CountResponse, ExecuteMsg, InstantiateMsg, QueryMsg};
+use secret_blueprint_box::state::State;
 ```
 
 ## Integration Tests
-- After completing your secret contract and unit test code, modify the `integration.ts` as needed. These are super helpful for illustrating how to interact with a Secret App such as connecting to the network, querying and executing transactions, etc.
+- After completing your secret contract and unit test code, modify the `secretbox.ts` as needed. These are super helpful for illustrating how to interact with a Secret App such as connecting to the network, querying and executing transactions, etc.
 
 
 ## Tutorial
@@ -154,13 +163,3 @@ If you're able to create and implement your own Secret Box UI/UX that's great. S
 If you're not that kind of developer (quite common!) and don't have the UI/UX expertise to create a polished user interface,  we ask that you include a wireframe in the form of a diagram or a simple text-based description of the elements required by your box and any other notes that would be helpful for our design/implementation team to bring your box to life. Our team will work with you to create a design based on your vision for your Secret Box.
 
 We look forward to seeing what Secret Box you will create for the Secret Network developer community :tada:.
-
-
-## Notes
-
-For reference, the Gitpod deploy/instantiation of the Secret Box contract address is noted below:
-
-```
-secret18vd8fpwxzck93qlwghaj6arh4p7c5n8978vsyg
-```
-

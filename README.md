@@ -1,69 +1,46 @@
 # Secret Blueprint Box ![secret box logo](/docs/logo-32x32.png)
 
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/secretuniversity/secret-box-vite-template)
-
 The Secret Blueprint Box is a Gitpod-enabled quickstart for dapp development on [Secret Network](https://scrt.network).
-It consists of a frontend (Vue + Vite + Typescript) and a secret contract (Rust + Secret CosmWasm), based on the [secret counter template](https://github.com/secretuniversity/secret-template-cw1).
+
+It consists of a frontend (Vue + Vite + Typescript) and a secret contract (Rust + Secret CosmWasm), based on the [secret counter template](https://github.com/secretuniversity/secret-template-cw1), that you will use to create your own _Secret Box_ for other developers!
+
+Feel free to swap out the frontend stack for something you prefer (e.g. React, Svelte). If you're comfortable with basic UI/UX design, we encourage you to make that part of 
+your _Secret Box_. You can also request assitance from the Secret Unversity team to help design your DApp frontend.
 
 ## What is a Secret Box?
 
 Secret Boxes are quickstarts or blueprints that contain everything you need to start developing on Secret Network.
 
-They are intended to be run in a developer sandbox so you don't have to worry about installing various tooling, frameworks, etc.
+- They are intended to be run in a developer sandbox environment--so you don't have to worry about installing various tooling and frameworks. Because they can be launched in a developer sandbox environment, they can be configured to perform automated tasks such as starting `localsecret` (dockerized Secret Network), compiling your secret contract, deploying and more.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/secretuniversity/secret-blueprint-box)
+*For Gitpod, see the `.gitpod.yml` configuration at the root of the project. There are additional versions that: 1) launch the `LocalSecret` blockchain on Gitpod workspace startup (`.gitpod.yml.localsecret`) and 2) automates the process of launching the local blockchain, compiling and deploying and creating the secret counter contract, and lastly, starting the frontend server.*
 
-There are a couple of things that make Secret Boxes special :rocket::
-
-- In addition to the secret contract, each box comes with a professionally-designed and implemented frontend, which includes a UI/UX kit.
+- In addition to the secret contract, each box comes with a professionally-designed and implemented frontend, which includes a basic UI/UX kit.
 
 *This lets you, as the developer, focus on building and can reduce the time it takes to evolve and deploy it as your own Secret App because you don't have to worry about the design. If you are a developer that can also design and implement the UI/UX for your app, you are a special breed indeed. For many developers, this skillset isn't quite in their wheelhouse. One of the major goals for Secret Boxes is to address this need in the Secret Network developer community.*
 
-- Because they're launched in a developer sandbox environment, they can be configured to perform automated tasks such as starting `localsecret` (dockerized Secret Network), compiling your secret contract, deploying and more.
-
-
-When launched the following automated tasks are kicked off:
-
-- launch an instance of `localsecret`
-- build and deploy the secret contract to `localsecret`
-- run unit-tests on the secret contract
-- instantiate the secret contract
-- install app dependencies and launch the frontend using Vite
+- As a _Secret Box_ developer you have the flexibility of designing your guide so that developers can setup a local environment, if they prefer.
 
 ## Creating a Secret Box
 
-Creating a Secret Box involves one part coding and one part technical writing.
+Creating a Secret Box involves one part coding and one part technical writing. It includes creating the tutorial for the box and implementing at least part or all of the secret
+contract and frontend code.
 
-Each Secret Box has an accompanying tutorial hosted on the Secret University website. The tutorial is written in Markdown and can be found in the [tutorial](/app/tutorial/) directory of this repo.
+> if you want to have the developer complete aspects of the box code as part of the tutorial, you can tailor it to include those instructions.
 
-See this [guide](/app/tutorial/guide.md) for more details.
 
-### Setup Your Local Developer Environment
+#### Setup Your Local Developer Environment
 
-This [Setting Up Your Environment](https://docs.scrt.network/secret-network-documentation/development/getting-started/setting-up-your-environment) guide will help you get going on your journey developing a Secret Box.
+This [Setting Up Your Environment](/docs/setting-up-your-environment) guide will walk you through setting up your local environment so you can start creating your _Secret Box_.
 
-In addition to the Secret Contract setup, you will also need to install `Nodejs`, `yarn` and `ts-node` for the 
-integration tests and frontend app.
 
-#### Install Nodejs
+#### Writing Your Guide
 
-Use the installer for your environment [here](https://nodejs.dev/en/download).
+_Secret Box_ tutorials are written using Markdown and can be found in the [tutorial](/app/tutorial/) directory of this repo.
 
-#### Install Yarn
+The tutorial content is placed in `app/tutorial/guide.md` with any accompanying images kept in the `app/tutorial/illustrations` directory.
 
-You can find information on installing `yarn`, getting started, advanced topics and more [here](https://yarnpkg.com).
-
-#### Install ts-node
-
-`ts-node` is a TypeScript engine for node.js and is used for the integration tests which are written in Typescript.
-
-```
-npm install -D ts-node
-```
-
-### Writing Your Guide
-
-Secret Box tutorials are written using Markdown. The tutorial content is placed in `app/tutorial/guide.md` with any accompanying images kept in the `app/tutorial/illustrations` directory.
+Use this [guide](/app/tutorial/guide.md) for detailed instructions on creating your box.
 
 #### Project Structure
 
@@ -107,7 +84,7 @@ These are great examples of interacting with the Secret Network and can be used 
 
 | Command                       | Action                                                    |
 |:----------------------------  |:--------------------------------------------------------  |
-| `npx ts-node integration.ts`  | Runs the integration tests                                |
+| `npx ts-node secretbox.ts`  | Runs the integration tests                                |
 
 
 ### Frontend App
