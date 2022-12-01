@@ -275,7 +275,7 @@ If it's started successfully, output in the terminal should look like this:
 
 ### Compile and Deploy
 
-Open a 2nd terminal window (we'll call this window `Secret Box workspace`). This is where we'll build and deploy the initial version of the secret contract.
+Open a 2nd terminal window (we'll call this window `Secret Box Workspace`). This is where we'll build and deploy the initial version of the secret contract.
 
 First, build the secret contract and if successful, run the unit tests.
 
@@ -317,21 +317,11 @@ Storing environment variables:
 SECRET_BOX_CODE=1 SECRET_BOX_ADDRESS=secret18vd8fpwxzck93qlwghaj6arh4p7c5n8978vsyg SECRET_BOX_HASH=0xf5a2d765f6cae020859870c671ce7988bb5bdd79f4224bd6268db6a27a408813
 ```
 
-### Launch the Secret Blueprint DApp
-
-Finally, in a 3rd terminal window (we'll call this window `Secret Blueprint`) install the dependencies and launch the Vite dev server.
-
-```bash
-cd $HOME/secret-blueprint-box/app
-yarn install
-yarn dev
-```
-
-### Setup Integration Tests
+#### Setup Integration Tests
 
 The integration tests are run using Typescript. We'll install the dependencies **only** at this step.
 
-In the `Secret Box workspace` terminal, run the following comands:
+In the `Secret Box Workspace` terminal, run the following comands:
 
 ```bash
 cd $HOME/secret-blueprint-box/tests
@@ -339,6 +329,16 @@ npm install
 ```
 
 **Note**: The integration tests will be run after you've completed the contract code in the tutorial.
+
+### Launch the Secret Blueprint DApp
+
+Finally, in a 3rd terminal window (we'll call this window `Secret Box Frontend`) install the dependencies and launch the Vite dev server.
+
+```bash
+cd $HOME/secret-blueprint-box/app
+yarn install
+yarn dev
+```
 
 ### Setup Your IDE
 

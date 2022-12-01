@@ -2,7 +2,29 @@
 
 ## Introduction
 
-This box comes with everything you need to create your own Secret Box. In the screenshot below, you can see the Secret Box launched in a [Gitpod](https://gitpod.io/docs) workspace. 
+This box comes with everything you need to create your own Secret Box. 
+
+### Setting Up Your Environment
+
+If you haven't already launched this box in a Gitpod workspace, or setup your local environment, follow the "Getting Started" steps [here](https://github.com/secretuniversity/secret-blueprint-box/README.md).
+
+At this point you've setup your _Secret Blueprint Box_ workspace including: 
+* the developer environment
+* started a `LocalSecret` blockchain instance
+* created and deployed your smart contract to `LocalSecret`
+* and finally, starting the VueJS web application: _Secret Blueprint App_.
+
+At this point, you should have the following three terminal windows open in your local or Gitpod environment:
+
+1. `LocalSecret` - the first terminal shows the blockchain starting up and producing blocks
+2. `Secret Box Workspace` - the 2nd terminal is where your contract gets compiled, deployed, and is the window you'll use to enter commands as you go through this tutorial
+3. `Secret Box Frontend` - the 3rd terminal is where your application server is launched, after the local network is running and the _Secret Blueprint_ contract has been created
+
+#### Gitpod Workspace Configuration
+
+If you've launched this box in [Gitpod](https://gitpod.io/docs), your workspace should look like this: 
+
+![](/docs/default-gitpod-configuration.png)
 
 _Gitpod Workspace Configuration_
 
@@ -85,7 +107,8 @@ See the following steps for more details on the changes you'll want to make. Fee
     ```
 
     
-## README.md
+## README
+
  - Modify the "Open in Gitpod" link so that it references your Secret Box repository name/location
 
 ```

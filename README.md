@@ -4,10 +4,9 @@ The Secret Blueprint Box is a Gitpod-enabled quickstart for dapp development on 
 
 It consists of a frontend (Vue + Vite + Typescript) and a secret contract (Rust + Secret CosmWasm), based on the [secret counter template](https://github.com/secretuniversity/secret-template-cw1), that you will use to create your own _Secret Box_ for other developers!
 
-If you're comfortable with basic UI/UX design, we encourage you to create that as part of 
-your _Secret Box_ implementation. You can also request assitance from the Secret Unversity team to help design your DApp frontend.
+If you're comfortable with basic UI/UX design, we encourage you to create that as part of  your _Secret Box_ implementation. You can also request assitance from the Secret Unversity team to help design your DApp frontend.
 
-This _Secret Blueprint Box_ comes with a very basic design and we encourage you, if you're comfortable with UI/UX design, to create and implement that as part of your _Secret Box_. And feel free to swap out the frontend stack for something you prefer (e.g. React, Svelte).
+This _Secret Blueprint Box_ comes with a very basic design. Also, feel free to swap out the frontend stack for something you prefer (e.g. React, Svelte).
 
 The guide is displayed as part of the frontend, with the tutorial steps in the left column, the _Secret Box DApp_ to the right and the tutorial content below that. You'll be modifying this guide markdown so that it follows the content specific to your box. Your box's frontend code will primarily go [here](`/app/src/components/SecretBox.vue`).
 
@@ -25,19 +24,21 @@ Secret Boxes are quickstarts or blueprints that contain everything you need to s
 
 *This lets you, as the developer, focus on building and can reduce the time it takes to evolve and deploy it as your own Secret App because you don't have to worry about the design. If you are a developer that can also design and implement the UI/UX for your app, you are a special breed indeed. For many developers, this skillset isn't quite in their wheelhouse. One of the major goals for Secret Boxes is to address this need in the Secret Network developer community.*
 
-- As a _Secret Box_ developer you have the flexibility of designing your guide so that developers can setup a local environment, if they prefer.
+- As a _Secret Box_ developer you have the flexibility of designing your guide so that developers can setup a local environment, if they prefer. And we have these guides pre-written to help you with that, which you can modify to suit your needs:
+
+  - [setting-up-your-environment](/docs/setting-up-your-environment.md)
+  - [setting-up-your-gitpod-workspace](/docs/setting-up-your-gitpod-workspace.md)
 
 ## Creating a Secret Box
 
-Creating a Secret Box involves one part coding and one part technical writing. It includes creating the tutorial for the box and implementing at least part or all of the secret
-contract and frontend code.
+Creating a Secret Box involves one part coding and one part technical, and possibly creative, writing. It includes developing the tutorial for the box and implementing at least part or all of the secret contract and frontend code.
 
-> if you want to have the developer complete aspects of the box code as part of the tutorial, you can tailor it to include those instructions.
+> if you want to have the developer complete aspects of the box code as part of the tutorial, you can tailor it to include those instructions. Or, you can walk the developer through the completed box code and then give additional instructions or notes on how to evolve it.
 
 
 #### Setup Your Local Developer Environment
 
-This [Setting Up Your Environment](/docs/setting-up-your-environment) guide will walk you through setting up your local environment so you can start creating your _Secret Box_.
+This [Setting Up Your Environment](/docs/setting-up-your-environment.md) guide will walk you through setting up your local environment so you can start creating your _Secret Box_.
 
 
 #### Writing Your Guide
@@ -45,6 +46,8 @@ This [Setting Up Your Environment](/docs/setting-up-your-environment) guide will
 _Secret Box_ tutorials are written using Markdown and can be found in the [tutorial](/app/tutorial/) directory of this repo.
 
 The tutorial content is placed in `app/tutorial/guide.md` with any accompanying images kept in the `app/tutorial/illustrations` directory.
+
+> If your _Secret Box_ requires the developer to modify code, you may want to create a `app/tutorial/solutions` folder that contains the completed code.
 
 Use this [guide](/app/tutorial/guide.md) for detailed instructions on creating your box.
 
@@ -90,7 +93,7 @@ These are great examples of interacting with the Secret Network and can be used 
 
 | Command                       | Action                                                    |
 |:----------------------------  |:--------------------------------------------------------  |
-| `npx ts-node secretbox.ts`  | Runs the integration tests                                |
+| `npx ts-node secretbox.ts`    | Runs the integration tests                                |
 
 
 ### Frontend App
