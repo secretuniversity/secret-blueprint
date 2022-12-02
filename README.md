@@ -8,7 +8,7 @@ If you're comfortable with basic UI/UX design, we encourage you to create that a
 
 This _Secret Blueprint Box_ comes with a very basic design. Also, feel free to swap out the frontend stack for something you prefer (e.g. React, Svelte).
 
-The guide is displayed as part of the frontend, with the tutorial steps in the left column, the _Secret Box DApp_ to the right and the tutorial content below that. You'll be modifying this guide markdown so that it follows the content specific to your box. Your box's frontend code will primarily go [here](`/app/src/components/SecretBox.vue`).
+The guide is displayed as part of the frontend, with the tutorial steps in the left column, the _Secret Box DApp_ to the right and the tutorial content below that. You'll be modifying this guide markdown so that it follows the content specific to your box. Your box's frontend code will primarily go [here](`https://github.com/secretchaingirl/secret-blueprint-box-gitpod/blob/main/app/src/components/SecretBox.vue`).
 
 ![](/docs/secret-blueprint-box.png)
 
