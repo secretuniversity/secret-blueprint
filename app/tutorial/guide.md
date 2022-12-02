@@ -6,7 +6,7 @@ This box comes with everything you need to create your own Secret Box.
 
 ### Setting Up Your Environment
 
-If you haven't already launched this box in a Gitpod workspace, or setup your local environment, follow the "Getting Started" steps [here](https://github.com/secretuniversity/secret-blueprint-box/README.md).
+If you haven't already launched this box in a Gitpod workspace, or setup your local environment, follow the "Getting Started" steps [here](https://github.com/secretuniversity/secret-blueprint-box/blob/main/README.md).
 
 At this point you've setup your _Secret Blueprint Box_ workspace including: 
 * the developer environment
