@@ -20,11 +20,11 @@ At this point, you should have the following three terminal windows open in your
 2. `Secret Box Workspace` - the 2nd terminal is where your contract gets compiled, deployed, and is the window you'll use to enter commands as you go through this tutorial
 3. `Secret Box Frontend` - the 3rd terminal is where your application server is launched, after the local network is running and the _Secret Blueprint_ contract has been created
 
-#### Gitpod Workspace Configuration
+**Gitpod Workspace Configuration**
 
 If you've launched this box in [Gitpod](https://gitpod.io/docs), your workspace should look like this: 
 
-![](/docs/default-gitpod-configuration.png)
+![](/tutorial/illustrations/default-gitpod-configuration.png)
 
 _Gitpod Workspace Configuration_
 
@@ -80,7 +80,7 @@ Aside from making your contract and app-specific changes to the template code, y
 
 See the following steps for more details on the changes you'll want to make. Feel free to make any needed modifications to make this Secret Box your own :tada:.
 
-## Cargo Configuration
+### Cargo Configuration
  - Make sure to modify the `Cargo.toml` file so it has the correct Secret Box name, author, description, etc.
     
     ``` 
@@ -107,7 +107,7 @@ See the following steps for more details on the changes you'll want to make. Fee
     ```
 
     
-## README
+### README
 
  - Modify the "Open in Gitpod" link so that it references your Secret Box repository name/location
 
@@ -121,7 +121,8 @@ https://gitpod.io/#https://github.com/secretuniversity/secret-blueprint-box
  
 The README is meant to be used in a local developer environment. Include instructions on setting up and running your Secret Box. Consider including anything you think will help [Secret University](https://scrt.university) list your secret box, upon review and approval by the core team. Based on your judgement, you might have images and even diagrams (e.g. UML), design descriptions--basically the key things you think will be helpful for Secret Network developers in learning from and using your Secret Box.
 
-## Schema
+### Schema
+
 - Modify `examples/schema.rs` and change the secret contract name so that it matches `Cargo.toml`
 
 ```
@@ -129,7 +130,8 @@ use secret_blueprint_box::msg::{CountResponse, ExecuteMsg, InstantiateMsg, Query
 use secret_blueprint_box::state::State;
 ```
 
-## Integration Tests
+### Integration Tests
+
 - After completing your secret contract and unit test code, modify the `secretbox.ts` as needed. These are super helpful for illustrating how to interact with a Secret App such as connecting to the network, querying and executing transactions, etc.
 
 
@@ -139,6 +141,8 @@ This is where you'll write the guide for your Secret Box. Under the `app/tutoria
 -  delete `app/tutorial/illustrations/secret-box-template.png`
 <br/>
  
+### Writing Your Guide
+
 One thing to consider when writing your guide is to determine what blueprint code your Secret Box contains and 
 what will be given in the tutorial for developers to add/modify manually.
 
@@ -185,6 +189,6 @@ After adding your code:
 ### UI/UX
 If you're able to create and implement your own Secret Box UI/UX that's great. Secret Boxes are meant to have beautiful, intuitive and easy to use interfaces.
 
-If you're not that kind of developer (quite common!) and don't have the UI/UX expertise to create a polished user interface,  we ask that you include a wireframe in the form of a diagram or a simple text-based description of the elements required by your box and any other notes that would be helpful for our design/implementation team to bring your box to life. Our team will work with you to create a design based on your vision for your Secret Box.
+If you're not that kind of developer (quite common!) and don't have the UI/UX expertise to create a polished user interface, we ask that you include a wireframe in the form of a diagram or a simple text-based description of the elements required by your box and any other notes that would be helpful for our design/implementation team to bring your box to life. Our team will work with you to create a design based on your vision for your Secret Box.
 
 We look forward to seeing what Secret Box you will create for the Secret Network developer community :tada:.
