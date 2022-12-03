@@ -13,7 +13,9 @@ const wallet = new Wallet(
 const secretBoxCode = import.meta.env.VITE_SECRET_BOX_CODE
 const secretBoxHash = import.meta.env.VITE_SECRET_BOX_HASH
 const secretBoxAddress = import.meta.env.VITE_SECRET_BOX_ADDRESS
+const secretBoxAddress = import.meta.env.VITE_SECRET_BOX_ADDRESS
 
+console.log(`local gRPC = ${localSecretUrl}`)
 console.log(`code id = ${secretBoxCode}`)
 console.log(`contract hash = ${secretBoxHash}`)
 console.log(`contract address = ${secretBoxAddress}`)
@@ -28,7 +30,8 @@ onMounted(async () => {
    // To create a signer secret.js client, also pass in a wallet
    console.log("Initializing Secret.js client ...")
   secretjs = await SecretNetworkClient.create({
-    grpcWebUrl: "http://localhost:9091",
+    //grpcWebUrl: "http://localhost:9091",
+    grpcWebUrl: localSecretUrl,
     chainId: "secretdev-1",
     wallet: wallet,
     walletAddress: wallet.address,
