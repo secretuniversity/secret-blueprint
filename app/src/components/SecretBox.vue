@@ -10,9 +10,9 @@ const wallet = new Wallet(
 )
 
 // Get environment variables from .env
+const localSecretUrl = import.meta.env.VITE_LOCALSECRET_GRPC
 const secretBoxCode = import.meta.env.VITE_SECRET_BOX_CODE
 const secretBoxHash = import.meta.env.VITE_SECRET_BOX_HASH
-const secretBoxAddress = import.meta.env.VITE_SECRET_BOX_ADDRESS
 const secretBoxAddress = import.meta.env.VITE_SECRET_BOX_ADDRESS
 
 console.log(`local gRPC = ${localSecretUrl}`)
