@@ -210,7 +210,7 @@ This environment is set up in such a way that can be accessed remotely as well.
 
 To get started, simply click [here](https://gitpod.io/#https://github.com/scrtlabs/GitpodDevEnv).
 
-To connect, prepend the port number with the Gitpod URL. e.g., if the workspace is at `https://secretunive-secretbluep-vijhqbc7uv2.ws-us77.gitpod.io` then you would be able to connect to the RPC service at `https://26657-secretunive-secretbluep-vijhqbc7uv2.ws-us77.gitpod.io`
+To connect, prepend the port number with the Gitpod URL. e.g., if the workspace is at `https://secretunive-secretcount-2qzt9b9me7a.ws-us77.gitpod.io` then you would be able to connect to the RPC service at `https://26657-secretunive-secretcount-2qzt9b9me7a.ws-us77.gitpod.io`
 
 To set up SecretCLI to connect to this environment, use the following commands
 
@@ -225,7 +225,7 @@ For more information, check the main repo at [https://github.com/scrtlabs/Gitpod
 
 ## Setup Development
 
-Just a few more things are needed to complete the setup of your development environment for this _Secret Blueprint Box_.
+Just a few more things are needed to complete the setup of your development environment for this _Secret Counter Box_.
 
 ##### Install Nodejs
 Use the installer for your environment [here](https://nodejs.org/en/download/package-manager).
@@ -242,12 +242,12 @@ npm install -D ts-node
 
 ### Clone the Repository
 
-Clone the _Secret Blueprint Box_ repo and then you'll use the build tools to get everything up and running!
+Clone the _Secret Counter Box_ repo and then you'll use the build tools to get everything up and running!
 
 ```bash
-git clone git@github.com:secretuniversity/secret-blueprint-box.git
+git clone git@github.com:secretuniversity/secret-counter-vuejs-box.git
 
-cd secret-blueprint-box
+cd secret-counter-vuejs-box
 ```
 
 ### Launch `LocalSecret`
@@ -255,7 +255,7 @@ cd secret-blueprint-box
 Open a terminal/powershell window (we'll call this window `LocalSecret`) and start the blockchain:
 
 ```bash
-cd $HOME/secret-blueprint-box
+cd $HOME/secret-counter-vuejs-box
 make localsecret
 ```
 
@@ -280,7 +280,7 @@ Open a 2nd terminal window (we'll call this window `Secret Box Workspace`). This
 First, build the secret contract and if successful, run the unit tests.
 
 ```bash
-cd $HOME/secret-blueprint-box
+cd $HOME/secret-counter-vuejs-box
 make build && make test
 ```
 
@@ -296,17 +296,19 @@ If successful, the output should look like this:
               <####> Create Secret Box contract <####>
 secretcli version in the docker image is: v0.0.0
 
-waiting on tx: 58780FC1D6F9CCC1CC8BEFC34EC87A1DFC17C26C55905F1849EED330DEECD1A3
+LocalSecret gRPC: https://9091-secretunive-secretcount-2qzt9b9me7a.ws-us77.gitpod.io
+
+waiting on tx: D9098C49321A18C7CDAC3AB12F7B1EF7FB61CCC17ABEA527E6E990F4E6A3D965
 uploaded contract
 got contract hash
 sending init message: '{"count": 16876}'
-waiting on tx: 9ED74D68F2DD075954B636FEEFFFF9AEFE183E2BD9509BA01FA9D579EA15DA8A
+waiting on tx: A74A2695F925A96116E955D7925A92AC8622241A1B6F40BA09A5ADE40D7AF4A6
 
 Secret Box created successfully!
 
-secret box code id: 1
-secret box contract address: secret18vd8fpwxzck93qlwghaj6arh4p7c5n8978vsyg
-secret box contract code hash: 0xf5a2d765f6cae020859870c671ce7988bb5bdd79f4224bd6268db6a27a408813
+secret code id: 1
+secret contract address: secret18vd8fpwxzck93qlwghaj6arh4p7c5n8978vsyg
+secret contract code hash: 0x8a28d614a769a8b3f472cca3b379b2694c6b483713b22d2f82a33cf354e7e09e
 
 Storing environment variables:
 
@@ -314,7 +316,7 @@ Storing environment variables:
 === Use 'source .env' to set the SECRET BOX environment variables in your local bash shell
 ===
 
-SECRET_BOX_CODE=1 SECRET_BOX_ADDRESS=secret18vd8fpwxzck93qlwghaj6arh4p7c5n8978vsyg SECRET_BOX_HASH=0xf5a2d765f6cae020859870c671ce7988bb5bdd79f4224bd6268db6a27a408813
+Returning environment variables for Gitpod workspace
 ```
 
 #### Setup Integration Tests
@@ -324,18 +326,18 @@ The integration tests are run using Typescript. We'll install the dependencies *
 In the `Secret Box Workspace` terminal, run the following comands:
 
 ```bash
-cd $HOME/secret-blueprint-box/tests
+cd $HOME/secret-counter-vuejs-box/tests
 npm install
 ```
 
 **Note**: The integration tests will be run after you've completed the contract code in the tutorial.
 
-### Launch the Secret Blueprint DApp
+### Launch the Simple Counter DApp
 
 Finally, in a 3rd terminal window (we'll call this window `Secret Box Frontend`) install the dependencies and launch the Vite dev server.
 
 ```bash
-cd $HOME/secret-blueprint-box/app
+cd $HOME/secret-counter-vuejs-box/app
 yarn install
 yarn dev
 ```

@@ -8,7 +8,7 @@ If you're comfortable with basic UI/UX design, we encourage you to create that a
 
 This _Secret Blueprint Box_ comes with a very basic design. Also, feel free to swap out the frontend stack for something you prefer (e.g. React, Svelte).
 
-The guide is displayed as part of the frontend, with the tutorial steps in the left column, the _Secret Box DApp_ to the right and the tutorial content below that. You'll be modifying this guide markdown so that it follows the content specific to your box. Your box's frontend code will primarily go [here](`https://github.com/secretchaingirl/secret-blueprint-box-gitpod/blob/main/app/src/components/SecretBox.vue`).
+The guide is displayed as part of the frontend, with the tutorial steps in the left column, the _Secret Box DApp_ to the right and the tutorial content below that. You'll be modifying this guide markdown so that it follows the content specific to your box. Your box's frontend code will primarily go [here](`https://github.com/secretuniversity/secret-blueprint-box/blob/main/app/src/components/SecretBox.vue`).
 
 ![](/docs/secret-blueprint-box.png)
 
@@ -27,7 +27,6 @@ Secret Boxes are quickstarts or blueprints that contain everything you need to s
 - As a _Secret Box_ developer you have the flexibility of designing your guide so that developers can setup a local environment, if they prefer. And we have these guides pre-written to help you with that, which you can modify to suit your needs:
 
   - [setting-up-your-environment](/docs/setting-up-your-environment.md)
-  - [setting-up-your-gitpod-workspace](/docs/setting-up-your-gitpod-workspace.md)
 
 ## Creating a Secret Box
 
@@ -126,12 +125,12 @@ http://localhost:1317/openapi/ to view the queries, transactions and parameters 
 When using the Gitpod workspace, prepend the port number to the Gitpod URL. 
 
 For example, if the workspace is at
-`https://secretunive-secretboxvi-zyc1kppqbvk.ws-us69.gitpod.io`, then you can connect to the LCD service at
-`https://1317-secretunive-secretboxvi-zyc1kppqbvk.ws-us69.gitpod.io`.
+`https://secretunive-secretbluep-vg4z4900cmh.ws-us77.gitpod.io`, then you can connect to the LCD service at
+`https://1317-secretunive-secretbluep-vg4z4900cmh.ws-us77.gitpod.io`.
 
 To use the Swagger or OpenAPI interaces append `/swagger/` or `/openapi/` to the Gitpod URL:
 
-`https://1317-secretunive-secretboxvi-zyc1kppqbvk.ws-us69.gitpod.io/swagger/`
+`https://1317-secretunive-secretbluep-vg4z4900cmh.ws-us77.gitpod.io/swagger/`
 
 ![](docs/swagger-interface.png)
 
