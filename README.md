@@ -24,7 +24,7 @@ Secret Boxes are quickstarts or blueprints that contain everything you need to s
 
 *This lets you, as the developer, focus on building and can reduce the time it takes to evolve and deploy it as your own Secret App because you don't have to worry about the design. If you are a developer that can also design and implement the UI/UX for your app, you are a special breed indeed. For many developers, this skillset isn't quite in their wheelhouse. One of the major goals for Secret Boxes is to address this need in the Secret Network developer community.*
 
-- As a _Secret Box_ developer you have the flexibility of designing your guide so that developers can setup a local environment, if they prefer. And we have these guides pre-written to help you with that, which you can modify to suit your needs:
+- As a _Secret Box_ developer you have the flexibility of designing your guide so that developers can setup a local environment, if they prefer. And we have this pre-written guide to help you with that, which you can modify to suit your needs:
 
   - [setting-up-your-environment](/docs/setting-up-your-environment.md)
 
