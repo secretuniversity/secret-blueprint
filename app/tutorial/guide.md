@@ -21,13 +21,15 @@ You should have the following three terminal windows open in your local environm
 3. `Secret Box Frontend` - the 3rd terminal is where your application server is launched, after `LocalSecret` is running and the _Secret Counter_ contract has been created
 
 **Gitpod Workspace Configuration**
-
+###
 If you've launched this box in [Gitpod](https://gitpod.io/docs), your workspace should look like this: 
+###
 
 ![](https://i.imgur.com/TOZWYbb.png)
 
+###
 _Gitpod Workspace Configuration_
-
+###
 The `.gitpod.yml` (in the project root directory) has definitions for tasks and prebuild information 
 that define how the Secret Box is configured and launched.
 
@@ -96,12 +98,16 @@ See the following steps for more details on the changes you'll want to make. Fee
     
     ``` 
     [dependencies]
-    cosmwasm-std = { package = "secret-cosmwasm-std", version = "1.0.0" }
-    cosmwasm-storage = { package = "secret-cosmwasm-storage", version = "1.0.0" }
-    schemars = "0.8.1"
-    serde = { version = "1.0.114", default-features = false, features = ["derive"] }
+    cosmwasm-std = { git = "https://github.com/scrtlabs/cosmwasm", tag = "v1.1.9-secret" }
+    cosmwasm-storage = { git = "https://github.com/scrtlabs/cosmwasm", tag = "v1.1.9-secret" }
+    schemars = { version = "0.8.11" }
+    serde = { version = "1.0" }
     thiserror = { version = "1.0" }
-    
+
+    # Uncomment these for some common extra tools
+    # secret-toolkit = { git = "https://github.com/scrtlabs/secret-toolkit", tag = "v0.8.0" }
+    # cw-storage-plus = { version = "1.0.1", default-features = false }
+
     # [dev-dependencies]
     cosmwasm-schema = "1.0.0"
     ```
@@ -138,7 +144,7 @@ This is where you'll write the guide for your Secret Box. Under the `app/tutoria
 
 - revise this guide as needed
 - store images used in your guide in the `app/tutorial/illustrations` directory for your reference
-- use https://imgur.com or another image hosting platform to store your images and then reference them in your guide as: `![](URL of image)`
+- use IPFS or an image hosting platform, such as https://imgur.com, to store your images and then reference them in your guide as: `![](URL of image)`
  
 ### Writing Your Guide
 
@@ -146,13 +152,14 @@ One thing to consider when writing your guide is to determine what blueprint cod
 
 In this scenario, consider creating a `solutions/` or similar directory that developers can refer to while learning.  It's also entirely possble, and acceptable, that your code is complete and the tutorial steps walk the developer through the key aspects and code snippets you decide to include!
 
+###
 This is an excellent example of a code walkthrough that is more inline with the above approach: [Millionaire's Problem Breakdown](https://docs.scrt.network/secret-network-documentation/development/getting-started/millionaires-problem-breakdown-extra-credit).
 
 ## Secret Box Frontend
 This is where all of your frontend code goes, under the `app/` directory and is setup as a [Vite](https://vitejs.dev/guide/)  project using the [Vue](https://vuejs.org/) framework and [Typescript](https://www.typescriptlang.org/) programming language.
-
+###
 *Vite* is a fast, lean build tool that lets you work with a number of frameworks (e.g. *vue, react, svelte*) and either *Javascript* or *Typescript*.
-
+###
 If you want to use other frameworks and languages, feel free to completely revamp the frontend code, the `README.md` and `package.json` to fit your Secret Box needs.
 
 After adding your code:
@@ -184,7 +191,8 @@ After adding your code:
 
 ### UI/UX
 If you're able to create and implement your own Secret Box UI/UX that's great. Secret Boxes are meant to have beautiful, intuitive and easy to use interfaces.
-
+###
 If you're not that kind of developer (quite common!) and don't have the UI/UX expertise to create a polished user interface, we ask that you create a wireframe in the form of a diagram or a simple text-based description of the elements required by your box and any other notes that would be helpful. Reach out to us via the "Submit a Ticket" form with your wireframe and/or notes, after submitting your _Secret Box_ for approval. Our team will work with you to create a design based on your vision.
-
-We look forward to seeing what Secret Box you will create for the Secret Network developer community :tada:.
+###
+We look forward to seeing what Secret Box you will create for the Secret Network developer community!
+###
