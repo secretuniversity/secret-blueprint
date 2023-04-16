@@ -2,7 +2,7 @@
 
 The Secret Blueprint Box is a Gitpod-enabled quickstart for dapp development on [Secret Network](https://scrt.network).
 
-It consists of a frontend (Vue + Vite + Typescript) and a secret contract (Rust + Secret CosmWasm), based on the [secret counter template](https://github.com/secretuniversity/secret-template-cw1), that you will use to create your own _Secret Box_ for other developers!
+It consists of a frontend (Vue + Vite + Typescript) and a secret contract (Rust + Secret CosmWasm), based on the [secret counter template](https://github.com/secretuniversity/secret-template), that you will use to create your own _Secret Box_ for other developers!
 
 If you're comfortable with basic UI/UX design, we encourage you to create that as part of  your _Secret Box_ implementation. You can also request assitance from the Secret Unversity team to help design your DApp frontend.
 
@@ -143,6 +143,7 @@ To use the Swagger or OpenAPI interaces append `/swagger/` or `/openapi/` to the
 
 # Contributors
 - Laura SecretChainGirl [Github](https://github.com/secetchaingirl) - secret blueprint box development
+- DDT [Github](https://github.com/DDT5) - secret contract development
 - Alex Sinplea [Github](https://github.com/sinplea) - frontend development
 - Jeff SecretMickey - [Telegram](https://t.me/secretMickey) UI/UX design
 - Kate Unakatu [Telegram](https://t.me/unakatu) - UI/UX design and graphics (Lorum Ipsem and Geek.pics founding team member)
